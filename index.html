@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Shopping Cart</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Javascript Shopping Cart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cart
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div id="sopping-list">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Title</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <hr>
+                            <p class="lead"><span id="total" class="mx-auto badge badge-danger"></span></p>
+                            <a href="#" class="btn btn-primary btn-block" id="clear">Empty</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron mt-4 mb-4">
+            <h1 class="display-3">Javascript Shopping Cart</h1>
+            <p class="lead">Latest Products</p>
+            <hr class="my-2">
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Read more</a>
+            </p>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card mb-3 p-3 bg-white">
+                    <img class="mb-2" style="height: 200px; width: 100%; display: block;" src="images/samsung.jpg" alt="Card image">
+                    <hr class="my-2">
+                    <h3 class="card-subtitle mb-3 mt-2 text-muted">Samsung S4</h3>
+                    <hr class="my-2">
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="float-left"><strike>2000 $</strike></p>
+                    <p id="price" class="text-center bg-danger text-white p-1">1499 $</p> 
+                    <a href="#" class="btn btn-primary btn-block" id="add-to-list" data-id="1">Add to cart</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3 p-3 bg-white">
+                    <img class="mb-2" style="height: 200px; width: 100%; display: block;" src="images/samsung.jpg" alt="Card image">
+                    <hr class="my-2">
+                    <h3 class="card-subtitle mb-3 mt-2 text-muted">Samsung S8</h3>
+                    <hr class="my-2">
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="float-left"><strike>9000 $</strike></p>
+                    <p id="price" class="text-center bg-danger text-white p-1">8499 $</p> 
+                    <a href="#" class="btn btn-primary btn-block" id="add-to-list" data-id="2">Add to cart</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3 p-3 bg-white">
+                    <img class="mb-2" style="height: 200px; width: 100%; display: block;" src="images/iphone.jpg" alt="Card image">
+                    <hr class="my-2">
+                    <h3 class="card-subtitle mb-3 mt-2 text-muted">Iphone 8</h3>
+                    <hr class="my-2">
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="float-left"><strike>10000 $</strike></p>
+                    <p id="price" class="text-center bg-danger text-white p-1">9499 $</p> 
+                    <a href="#" class="btn btn-primary btn-block" id="add-to-list" data-id="3">Add to cart</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3 p-3 bg-white">
+                    <img class="mb-2" style="height: 200px; width: 100%; display: block;" src="images/htc_one.jpg" alt="Card image">
+                    <hr class="my-2">
+                    <h3 class="card-subtitle mb-3 mt-2 text-muted">HTC ONE</h3>
+                    <hr class="my-2">
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="float-left"><strike>2000 $</strike></p>
+                    <p id="price" class="text-center bg-danger text-white p-1">1799 $</p> 
+                    <a href="#" class="btn btn-primary btn-block" id="add-to-list" data-id="4">Add to cart</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3 p-3 bg-white">
+                    <img class="mb-2" style="height: 200px; width: 100%; display: block;" src="images/toshiba.jpg" alt="Card image">
+                    <hr class="my-2">
+                    <h3 class="card-subtitle mb-3 mt-2 text-muted">TOSHIBA</h3>
+                    <hr class="my-2">
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="float-left"><strike>4000 $</strike></p>
+                    <p id="price" class="text-center bg-danger text-white p-1">3299 $</p> 
+                    <a href="#" class="btn btn-primary btn-block" id="add-to-list" data-id="5">Add to cart</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3 p-3 bg-white">
+                    <img class="mb-2" style="height: 200px; width: 100%; display: block;" src="images/diesel.jpg" alt="Card image">
+                    <hr class="my-2">
+                    <h3 class="card-subtitle mb-3 mt-2 text-muted">DELL</h3>
+                    <hr class="my-2">
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="float-left"><strike>7000 $</strike></p>
+                    <p id="price" class="text-center bg-danger text-white p-1">4999 $</p> 
+                    <a href="#" class="btn btn-primary btn-block" id="add-to-list" data-id="6">Add to cart</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3 p-3 bg-white">
+                    <img class="mb-2" style="height: 200px; width: 100%; display: block;" src="images/toyota.jpg" alt="Card image">
+                    <hr class="my-2">
+                    <h3 class="card-subtitle mb-3 mt-2 text-muted">MACBOOK</h3>
+                    <hr class="my-2">
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="float-left"><strike>12000 $</strike></p>
+                    <p id="price" class="text-center bg-danger text-white p-1">11499 $</p> 
+                    <a href="#" class="btn btn-primary btn-block" id="add-to-list" data-id="7">Add to cart</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-3 p-3 bg-white">
+                    <img class="mb-2" style="height: 200px; width: 100%; display: block;" src="images/jetta.jpg" alt="Card image">
+                    <hr class="my-2">
+                    <h3 class="card-subtitle mb-3 mt-2 text-muted">HP</h3>
+                    <hr class="my-2">
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="float-left"><strike>2000 $</strike></p>
+                    <p id="price" class="text-center bg-danger text-white p-1">1699 $</p> 
+                    <a href="#" class="btn btn-primary btn-block" id="add-to-list" data-id="8">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container mt-3">
+            <div class="text-center">
+                <p class="lead">&copy;DCoding 2018.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
